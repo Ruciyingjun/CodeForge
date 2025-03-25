@@ -1,0 +1,4 @@
+# AI配置
+ai:
+  dashscope:
+    apikey: sk-48dffd39ed4041568e30c142dc9f1500
