@@ -60,8 +60,12 @@ ruoyi-system/src/main/java/com/ruoyi/system/
 待办：①csdn演示文档，②优化代码质量分析前端界面，③考虑是否继续做多轮对话。
 
 
+实现了chat平台助手模块，并发现了一个bug：代码质量分析模块中代码编辑区无法选中编辑。
+
+在ruoyi-system\src\main\java\com\ruoyi\system\ai\domain\ChatHistory.java下实现聊天历史实体类，并在隔壁的message和AIRequestBody写对应的处理方法，
+在ruoyi-system\src\main\java\com\ruoyi\system\ai\controller\AIChatController.java写聊天逻辑，将前端的用户角色设定也增加到这里。
 3.26日--------------------------------------------------------------------------------------------------------
-实现了chat平台助手模块，并发现了一个bug：代码质量分析模块中代码编辑区无法选中编辑。		
+
 
 
 
