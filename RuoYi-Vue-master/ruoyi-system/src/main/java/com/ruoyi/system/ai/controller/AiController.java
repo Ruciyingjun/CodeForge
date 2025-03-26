@@ -7,7 +7,7 @@ import com.ruoyi.common.core.domain.AjaxResult;
 // import org.apache.logging.log4j.message.Message;
 import com.ruoyi.system.ai.config.AiConfig;
 import com.ruoyi.system.ai.domain.AIRequestBody;
-import com.ruoyi.system.ai.domain.Message;  // 使用我们自定义的 Message 类
+import com.ruoyi.system.ai.domain.Message;  // 使用自定义的 Message 类
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
@@ -27,6 +27,11 @@ import static com.ruoyi.system.ai.config.AiConfig.API_URL;
 @RestController
 @RequestMapping("/system/ai")
 public class AiController extends BaseController {
+    /**
+     * 
+     * 智能代码生成模块
+     * 
+     */
     
     @PostMapping("/generateCode")
     public AjaxResult generateCode(@RequestBody GenerateCodeRequest request) {

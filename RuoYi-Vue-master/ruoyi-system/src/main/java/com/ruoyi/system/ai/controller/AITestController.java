@@ -21,6 +21,9 @@ import com.ruoyi.system.ai.domain.AIRequestBody;
 @RestController
 @RequestMapping("/system/ai")
 public class AITestController extends BaseController {
+    /**
+     * 一键测试连接模块。
+     */
     
     // 删除内部的 RequestBody 类定义
     

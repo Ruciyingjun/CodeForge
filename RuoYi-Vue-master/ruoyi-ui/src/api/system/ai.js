@@ -9,3 +9,20 @@ export function testAIConnection() {
     method: 'get'
   })
 }
+
+// 发送聊天消息
+export function sendMessage(data) {
+  return request({
+    url: '/system/ai/chat/send',
+    method: 'post',
+    data: data
+  })
+}
+
+// 获取聊天历史
+export function getChatHistory(sessionId) {
+  return request({
+    url: `/system/ai/chat/history/${sessionId}`,
+    method: 'get'
+  })
+}
