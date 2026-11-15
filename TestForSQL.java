@@ -1,29 +1,28 @@
-package com.example.controller;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.web.bind.annotation.*;
-
-import java.io.File;
-
-@RestController
-@RequestMapping("/api/user")
-public class UserController {
-
-    @Autowired
-    private JdbcTemplate jdbcTemplate;
-
-    // 原始版本：安全的登录与文件获取逻辑
-    @PostMapping("/login")
-    public String login(@RequestParam String username, @RequestParam String password) {
-        // 使用参数化查询，防止 SQL 注入
-        String sql = "SELECT role FROM users WHERE username = ? AND password = ?";
-        return jdbcTemplate.queryForObject(sql, String.class, username, password);
+{
+  "id": "a4bd3a10-94d3-4667-a625-b44a3c44c810",
+  "state": "FAILED",
+  "repository": "Ruciyingjun/CodeForge",
+  "pull_request": 8,
+  "error": "GitHub API request failed: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)>",
+  "created_at": "2026-11-15T06:23:23.619192+00:00",
+  "updated_at": "2026-11-15T06:23:57.895780+00:00",
+  "tenant_id": "default",
+  "cancel_requested": false,
+  "input": {
+    "mode": "agentic",
+    "shadow": false,
+    "source": "github-webhook",
+    "diff_url": "https://github.com/Ruciyingjun/CodeForge/pull/8.diff",
+    "diff_pending": true,
+    "release_lane": "stable"
+  },
+  "report": null,
+  "trace": [
+    {
+      "step": 1,
+      "state": "FAILED",
+      "message": "Task entered the dead-letter queue: GitHub API request failed: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)>",
+      "created_at": "2026-11-15T06:23:57.895780+00:00"
     }
-
-    @GetMapping("/file")
-    public File getUserFile(@RequestParam String filename) {
-        // 安全的路径拼接（假设已有基础校验）
-        return new File("/var/www/user_files/" + filename);
-    }
-}
+  ],
+  "collaboration": []
